@@ -1,6 +1,5 @@
-chrome.browserAction.onClicked.addListener(function(tab) {
-    var currentUrl = tab.url;
-    var archiveUrl = "https://archive.is/newest/" + currentUrl;
-    chrome.tabs.update(tab.id, {url: archiveUrl});
-  });
+var currentUrl = window.location.href;
+var archiveUrl = "https://archive.is/newest/" + currentUrl;
+window.location.href = archiveUrl;
+
   

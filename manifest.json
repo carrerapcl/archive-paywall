@@ -1,16 +1,19 @@
 {
-    "manifest_version": 2,
-    "name": "Go to Archive",
+    "manifest_version": 3,
+    "name": "Archive Redirector",
     "version": "1.0",
     "description": "Redirect to archive.is version of the current page",
     "permissions": ["activeTab"],
-    "browser_action": {
-      "default_title": "Archive Redirect",
-      "default_popup": "popup.html"
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
     },
     "background": {
-      "scripts": ["background.js"],
-      "persistent": false
+      "service_worker": "background.js"
     },
     "content_scripts": [
       {
@@ -18,5 +21,5 @@
         "js": ["redirect.js"]
       }
     ]
-  }
+  }  
   
