@@ -5,3 +5,4 @@ document.getElementById('redirect').addEventListener('click', function() {
       chrome.tabs.update(tabs[0].id, {url: archiveUrl});
     });
   });
+    
