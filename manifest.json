@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Go to Archive",
+    "version": "1.0",
+    "description": "Redirect to archive.is version of the current page",
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_title": "Archive Redirect",
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["redirect.js"]
+      }
+    ]
+  }
+  
