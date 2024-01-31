@@ -1,5 +1,5 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "Go to Archive",
     "version": "1.0",
     "description": "Redirect to archive.is version of the current page",
@@ -9,8 +9,8 @@
       "default_popup": "popup.html"
     },
     "background": {
-      "service_worker": "service_worker.js",
-      "type": "module"
+      "scripts": ["background.js"],
+      "persistent": false
     },
     "content_scripts": [
       {
